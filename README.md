@@ -6,7 +6,8 @@ In this project, it will involve hardening an Identity and Access Management (IA
 
 
 ## Misconfigured IAM Environment
-<img width="563" height="402" alt="Untitled Diagram drawio(1)" src="https://github.com/user-attachments/assets/3c329eee-0d3b-407a-89f0-220e6f84cc92" />
+<img width="562" height="402" alt="IAM Diagram drawio" src="https://github.com/user-attachments/assets/0a1f9a9a-0232-476c-b978-a6676f4f0999" />
+
 
 ## Risk Analysis
 

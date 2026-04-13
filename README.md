@@ -9,7 +9,16 @@ In this project, it will involve hardening an Identity and Access Management (IA
 <img width="562" height="402" alt="IAM Diagram drawio" src="https://github.com/user-attachments/assets/0a1f9a9a-0232-476c-b978-a6676f4f0999" />
 
 
-## Risk Analysis
+## Risk Assessment
+
+### Hazard Identification
+
+### Identifying Key Stakeholders At Risk
+
+### Evaluation of Risks
+
+### Risk Management Plan
+
 
 ## Secure Design Changes
 

@@ -61,11 +61,11 @@ been added to the business unit’s risk register for monitoring and future reme
   </tr>
   <tr>
     <th>Description</th>
-    <td>[Describe the cause of the risk]</td>
+    <td>Agent Smith can reset Trinity's password and may be able to disable or bypass Multi-Factor Authentication (MFA)</td>
   </tr>
   <tr>
     <th>Cause</th>
-    <td>Cause of risk</td>
+    <td>Misconfiguration of roles for users in the Microsoft 365 Tenant</td>
   </tr>
   <tr>
     <th></th>
@@ -75,18 +75,18 @@ been added to the business unit’s risk register for monitoring and future reme
   </tr>
   <tr>
     <th>Current risk</th>
-    <td>Choose an item</td>
-    <td>Choose an item</td>
-    <td>Choose an item</td>
+    <td>Possible</td>
+    <td>Major</td>
+    <td>High</td>
   </tr>
   <tr>
     <th>Justification</th>
-    <td>Choose an item</td>
-    <td>Choose an item</td>
+    <td>Agent Smith can already bypass a layer of defense; only one remaining is MFA, which might be able to be bypassed or disabled</td>
+    <td>Confidential data could be compromised and Trinity's account can be used as a basis for social engineering</td>
   </tr>
   <tr>
     <th>Recommended treatment</th>
-    <td colspan = "3">Recommended treatment to bring risk to an acceptable level</td>
+    <td colspan = "3">Configure role-based access control properly; revoke access to Helpdesk Administrator from Agent Smith</td>
   </tr>
   <tr>
     <th></th>
@@ -96,19 +96,19 @@ been added to the business unit’s risk register for monitoring and future reme
   </tr>
   <tr>
     <th>Residual Risk</th>
-    <td>Choose item</td>
-    <td>Choose item</td>
-    <td>Choose item</td>
+    <td>Rare</td>
+    <td>Moderate</td>
+    <td>Low</td>
   </tr>
   <tr>
     <th>Justification</th>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Applying the security controls rectifies the problem, but maybe some risk can remain if Smith establishes a foothold or exfiltrates sensitive data</td>
+    <td>If residual risk remains, it is likely to be limited by the permissions of Helpdesk administrator - troublesome, but not a nightmare. </td>
+    <td>Medium</td>
   </tr>
   <tr>
     <th>Management Response</th>
-    <td>Choose</td>
-    <td>Provide rationale for risk strategy</td>
+    <td>Mitigate</td>
+    <td>The risk proposes a systemic security vulnerability in the Microsoft tenant to both customers submitting support tickets, company personnel and data.</td>
   </tr>
 </table>

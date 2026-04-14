@@ -39,9 +39,9 @@ to leverage those permissions outside the scope of their account to harvest data
 |-----|------------------------------------------|-----------------------------------------------------|---------------------|---------------------|
 |  1  | **Account Compromise**                  | **Compromise of Trinity's Account**                 | High                | Mitigate            | 
 |  2  | **Confidentiality and Data Protection** | **Unauthorised Access of Sharepoint**               | High                | Mitigate            | 
-|  3  | **Insider Threats**                     | **Internal Guest Account With Elevated Privileges** | High                | Mitigate            | 
+|  3  | **Insider Threats**                     | **Reconaissance on Administrative Units**           | Medium              | Mitigate            | 
 |  4  | **Processes and Organisation**          | **Service Request Interception**                    | Medium              | Mitigate            |
-|  5  | **Social Engineering**                  | **Business Email Compromise**                       | Low                 | Accept              |
+|  5  | **Social Engineering**                  | **Abuse of Misassigned Authority**                  | Low                 | Accept              |
 
 ## Business Unit Acknowledgement
 I certify that I have verified all risks identified and the remediations recommended. 
@@ -171,5 +171,188 @@ been added to the business unit’s risk register for monitoring and future reme
     <th>Management Response</th>
     <td>Mitigate</td>
     <td colspan = "2">An encryption-at-rest encryption scheme can be applied to ensure the data is secured while in Trinity's SharePoint. Even if her SharePoint is compromised, it provides an extra layer of         defense.</td>
+  </tr>
+</table>
+
+---
+
+<table>
+  <tr>
+    <th colspan = "4">Risk #3: Reconaissance on Administrative Units</th>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td colspan = "3">Agent Smith has read permissions as HelpDesk Administrator to view Administrative Units (AUs) on Member accounts</td>
+  </tr>
+  <tr>
+    <th>Cause</th>
+    <td colspan ="3">HelpDesk Administrator role grants Smith read permissions to view AUs of Member Accounts</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Likelihood</th>
+    <th>Consequence</th>
+    <th>Risk Level</th>
+  </tr>
+  <tr>
+    <th>Current risk</th>
+    <td>Likely</td>
+    <td>Minor</td>
+    <td>Low</td>
+  </tr>
+  <tr>
+    <th>Justification</th>
+    <td>Smith is likely to have viewed the AUs on Member Accounts if he has a basic understanding of what his role grants, and it has a low opportunity cost to check</td>
+    <td>Loss of confidentiality of AUs that have been distributed to the Member accounts within the Microsoft Tenant</td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Recommended treatment</th>
+    <td colspan = "3">Revoke Smith's access to the HelpDesk Administrator role; this prevents his read-only permissions to view the AUs</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Likelihood</th>
+    <th>Consequence</th>
+    <th>Risk Level</th>
+  </tr>
+  <tr>
+    <th>Residual Risk</th>
+    <td>Rare</td>
+    <td>Minor</td>
+    <td>Low</td>
+  </tr>
+  <tr>
+    <th>Justification</th>
+    <td>Smith is unlikely to circumvent his loss of read permissions unless he establishes a deeper foothold. Thus, it is rare for there to be residual risk.</td>
+    <td colspan = "2">There could still be a minor threshold of damage done if Smith recorded the AUs and the Tenant did not change them to invalidate Smith's intelligence gathering </td>
+
+  </tr>
+  <tr>
+    <th>Management Response</th>
+    <td>Mitigate</td>
+    <td colspan = "2">Change the existing AUs on Member Accounts to nullify Smith's intelligence gathering and implement measures to secure the resources themselves that the member accounts can access.</td>
+  </tr>
+</table>
+
+---
+
+<table>
+  <tr>
+    <th colspan = "4">Risk #4: Service Request Interception</th>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td colspan = "3">Agent Smith can intercept Service Requests from customers or users through the Azure ticketing system. He could exploit them for financial gain or compromise their systems as well.</td>
+  </tr>
+  <tr>
+    <th>Cause</th>
+    <td colspan ="3">Smith's permissions as a HelpDesk Administator allows him to manage Service Requests from users or customers.</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Likelihood</th>
+    <th>Consequence</th>
+    <th>Risk Level</th>
+  </tr>
+  <tr>
+    <th>Current risk</th>
+    <td>Possible</td>
+    <td>Major</td>
+    <td>High</td>
+  </tr>
+  <tr>
+    <th>Justification</th>
+    <td>Depending on Smith's agenda, he could intercept these requests if he is pursuing financial gain or wants to spread a virus (e.g Bitcoin Miner) to other PCs.</td></td>
+    <td>Significant potential reputational, legal or regulatory damage if Smith is able to successfully impersonate an employee and exploit a user of their services.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Recommended treatment</th>
+    <td colspan = "3">Revoke Smith's access to the HelpDesk Administrator role; this ensures they can no longer manage ticketing requests.</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Likelihood</th>
+    <th>Consequence</th>
+    <th>Risk Level</th>
+  </tr>
+  <tr>
+    <th>Residual Risk</th>
+    <td>Unlikely</td>
+    <td>Major</td>
+    <td>Low</td>
+  </tr>
+  <tr>
+    <th>Justification</th>
+    <td>Smith is unlikely to be able to finish his potential exploitation of a customer or user from a ticket after having his permissions revoked. </td>
+    <td colspan = "2">Smith might still be able to exploit a user based on the information he receives from a support ticket, which can tarnish organisational reputation and incur legal liabilities. </td>
+
+  </tr>
+  <tr>
+    <th>Management Response</th>
+    <td>Mitigate</td>
+    <td colspan = "2">Revoke Smith's access to HelpDesk Administrator and immediately contact any customers Smith served through the Ticketing Portal for potential damage control.</td>
+  </tr>
+</table>
+
+---
+
+<table>
+  <tr>
+    <th colspan = "4">Risk #5: Abuse of Misassigned Authority</th>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td colspan = "3">If Smith was provisioned a Microsoft 365 License to access Outlook, he could phish other members of the organisation, existing customers, or potential ones as Helpdesk Administrator.</td>
+  </tr>
+  <tr>
+    <th>Cause</th>
+    <td colspan ="3">Smith's foothold in the HelpDesk Administrator role privileges him with the authority of a trustworthy member of the organisation.</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Likelihood</th>
+    <th>Consequence</th>
+    <th>Risk Level</th>
+  </tr>
+  <tr>
+    <th>Current risk</th>
+    <td>Rare</td>
+    <td>Moderate</td>
+    <td>Low</td>
+  </tr>
+  <tr>
+    <th>Justification</th>
+    <td>Smith would have to convince another a User, Licensing or Global Administrator to assign him a Microsoft 365 License, which is exceedingly unlikely.</td></td>
+    <td>Smith would be able to abuse his misassignment of power to trick users into trusting him and divulging personal information, or clicking on malicious phishing links.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Recommended treatment</th>
+    <td colspan = "3">Revoke Smith's access to the HelpDesk Administrator role; contact any affected parties and offer remediation support.</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Likelihood</th>
+    <th>Consequence</th>
+    <th>Risk Level</th>
+  </tr>
+  <tr>
+    <th>Residual Risk</th>
+    <td>Rare</td>
+    <td>Minor</td>
+    <td>Low</td>
+  </tr>
+  <tr>
+    <th>Justification</th>
+    <td>Some existing systems might have been successfully phished and presently infected. This would be rare, as a license is needed to do this and it is doubtful Smith could obtain it.</td>
+    <td colspan = "2">If Smith could somehow pull off obtaining a Microsoft 365 License and infecting other systems with phishing malware, then the consequence could be moderate. </td>
+
+  </tr>
+  <tr>
+    <th>Management Response</th>
+    <td>Mitigate</td>
+    <td colspan = "2">Revoke Smith's access to HelpDesk Administrator and immediately contact any customers Smith reached out to over email; offer remediation efforts and support.</td>
   </tr>
 </table>

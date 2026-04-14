@@ -12,7 +12,7 @@ In this project, it will involve hardening an Identity and Access Management (IA
 ---
 
 ## Risk Assessment
-A detailed breakdown of the risks associated with overprivileging Agent Smith's account with the permissions of Helpdesk Administrator can be found [here](/risk-report).
+A detailed breakdown of the risks associated with overprivileging Agent Smith's account with the permissions of Helpdesk Administrator can be found [here](/risk%20report).
 
 ---
 

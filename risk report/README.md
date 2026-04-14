@@ -35,12 +35,13 @@ in Trinity's SharePoint. The 'Valid Accounts: Cloud Accounts' technique's identi
 to leverage those permissions outside the scope of their account to harvest data.
 
 ## Summary
-| Classification               | Current Risk                                     | Mitigation Strategy |
-|------------------------------|--------------------------------------------------|---------------------|
-| **Placeholder**              | test                                             | Choose an item      |
-| **Placeholder**              | test                                             | Choose an item      |
-| **Placeholder**              | test                                             | Choose an Item      |
-| **Placeholder**              | test                                             | Choose an Item      |
+| Classification                        | Risk                                             | Current Risk        | Mitigation Strategy |
+|-----------------------------------------|-----------------------------------------------------|---------------------|---------------------|
+| **Account Compromise**                  | **Compromise of Trinity's Account**                 | High                | Mitigate            | 
+| **Confidentiality and Data Protection** | **Unauthorised access of Sharepoint**               | High                | Mitigate            | 
+| **Insider Threats**                     | **Internal Guest account with elevated privileges** | High                | Mitigate            | 
+| **Processes and Organisation**          | **Service Request Interception**                    | Medium              | Mitigate            |
+| **Social Engineering**                  | **Business Email Compromise**                       | Low                 | Accept              |
 
 ## Business Unit Acknowledgement
 I certify that I have verified all risks identified and the remediations recommended. 

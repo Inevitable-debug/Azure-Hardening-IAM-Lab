@@ -35,13 +35,13 @@ in Trinity's SharePoint. The 'Valid Accounts: Cloud Accounts' technique's identi
 to leverage those permissions outside the scope of their account to harvest data.
 
 ## Summary
-| Classification                        | Risk                                             | Current Risk        | Mitigation Strategy |
-|-----------------------------------------|-----------------------------------------------------|---------------------|---------------------|
-| **Account Compromise**                  | **Compromise of Trinity's Account**                 | High                | Mitigate            | 
-| **Confidentiality and Data Protection** | **Unauthorised access of Sharepoint**               | High                | Mitigate            | 
-| **Insider Threats**                     | **Internal Guest account with elevated privileges** | High                | Mitigate            | 
-| **Processes and Organisation**          | **Service Request Interception**                    | Medium              | Mitigate            |
-| **Social Engineering**                  | **Business Email Compromise**                       | Low                 | Accept              |
+| ID  | Classification                          | Risk                                                | Current Risk        | Mitigation Strategy |
+|-----|------------------------------------------|-----------------------------------------------------|---------------------|---------------------|
+|  1  | **Account Compromise**                  | **Compromise of Trinity's Account**                 | High                | Mitigate            | 
+|  2  | **Confidentiality and Data Protection** | **Unauthorised Access of Sharepoint**               | High                | Mitigate            | 
+|  3  | **Insider Threats**                     | **Internal Guest Account With Elevated Privileges** | High                | Mitigate            | 
+|  4  | **Processes and Organisation**          | **Service Request Interception**                    | Medium              | Mitigate            |
+|  5  | **Social Engineering**                  | **Business Email Compromise**                       | Low                 | Accept              |
 
 ## Business Unit Acknowledgement
 I certify that I have verified all risks identified and the remediations recommended. 
@@ -55,3 +55,60 @@ been added to the business unit’s risk register for monitoring and future reme
 | **Thomas Anderson**          | Global Administrator                             | 14/04/2026 | _**Thomas Anderson**_  |
 
 ## Details
+<table>
+  <tr>
+    <th colspan = "4">Risk #1: Compromise of Trinity's Account</th>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>[Describe the cause of the risk]</td>
+  </tr>
+  <tr>
+    <th>Cause</th>
+    <td>Cause of risk</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Likelihood</th>
+    <th>Consequence</th>
+    <th>Risk Level</th>
+  </tr>
+  <tr>
+    <th>Current risk</th>
+    <td>Choose an item</td>
+    <td>Choose an item</td>
+    <td>Choose an item</td>
+  </tr>
+  <tr>
+    <th>Justification</th>
+    <td>Choose an item</td>
+    <td>Choose an item</td>
+  </tr>
+  <tr>
+    <th>Recommended treatment</th>
+    <td colspan = "3">Recommended treatment to bring risk to an acceptable level</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Likelihood</th>
+    <th>Consequence</th>
+    <th>Risk Level</th>
+  </tr>
+  <tr>
+    <th>Residual Risk</th>
+    <td>Choose item</td>
+    <td>Choose item</td>
+    <td>Choose item</td>
+  </tr>
+  <tr>
+    <th>Justification</th>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Management Response</th>
+    <td>Choose</td>
+    <td>Provide rationale for risk strategy</td>
+  </tr>
+</table>

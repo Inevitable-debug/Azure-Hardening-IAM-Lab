@@ -142,7 +142,8 @@ been added to the business unit’s risk register for monitoring and future reme
   <tr>
     <th>Justification</th>
     <td>Risk of accessing Trinity's SharePoint is contingent on him compromising her account; both risks are possible</td>
-    <td colspan = "2">Smith compromising Trinity's SharePoint could yield customer records, IP rights, or confidential data. It is unknown - so risk is moderate/unknown.</td>
+    <td>Smith compromising Trinity's SharePoint could yield customer records, IP rights, or confidential data. It is unknown - so risk is moderate/unknown.</td>
+    <td></td>
   </tr>
   <tr>
     <th>Recommended treatment</th>

@@ -61,11 +61,11 @@ been added to the business unit’s risk register for monitoring and future reme
   </tr>
   <tr>
     <th>Description</th>
-    <td>Agent Smith can reset Trinity's password and may be able to disable or bypass Multi-Factor Authentication (MFA)</td>
+    <td colspan = "3">Agent Smith can reset Trinity's password and may be able to disable or bypass Multi-Factor Authentication (MFA)</td>
   </tr>
   <tr>
     <th>Cause</th>
-    <td>Misconfiguration of roles for users in the Microsoft 365 Tenant</td>
+    <td colspan = "3">Misconfiguration of roles for users in the Microsoft 365 Tenant</td>
   </tr>
   <tr>
     <th></th>
@@ -83,6 +83,7 @@ been added to the business unit’s risk register for monitoring and future reme
     <th>Justification</th>
     <td>Agent Smith can already bypass a layer of defense; only one remaining is MFA, which might be able to be bypassed or disabled</td>
     <td>Confidential data could be compromised and Trinity's account can be used as a basis for social engineering</td>
+    <td></td>
   </tr>
   <tr>
     <th>Recommended treatment</th>
@@ -103,12 +104,71 @@ been added to the business unit’s risk register for monitoring and future reme
   <tr>
     <th>Justification</th>
     <td>Applying the security controls rectifies the problem, but maybe some risk can remain if Smith establishes a foothold or exfiltrates sensitive data</td>
-    <td>If residual risk remains, it is likely to be limited by the permissions of Helpdesk administrator - troublesome, but not a nightmare. </td>
-    <td>Medium</td>
+    <td colspan = "2">If residual risk remains, it is likely to be limited by the permissions of Helpdesk administrator - troublesome, but not a nightmare. </td>
   </tr>
   <tr>
     <th>Management Response</th>
     <td>Mitigate</td>
-    <td>The risk proposes a systemic security vulnerability in the Microsoft tenant to both customers submitting support tickets, company personnel and data.</td>
+    <td colspan = "2">The risk proposes a systemic security vulnerability in the Microsoft tenant to both customers submitting support tickets, company personnel and data.</td>
+  </tr>
+</table>
+
+---
+
+<table>
+  <tr>
+    <th colspan = "4">Risk #2: Unauthorised Access of Sharepoint</th>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td colspan = "3">If Agent Smith compromises Trinity's account, he will be able to access her Sharepoint and the data therein. (MFA)</td>
+  </tr>
+  <tr>
+    <th>Cause</th>
+    <td colspan ="3">Compromise of Trinity's Microsoft 365 Tenant user account</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Likelihood</th>
+    <th>Consequence</th>
+    <th>Risk Level</th>
+  </tr>
+  <tr>
+    <th>Current risk</th>
+    <td>Possible</td>
+    <td>Moderate</td>
+    <td>High</td>
+  </tr>
+  <tr>
+    <th>Justification</th>
+    <td>Risk of accessing Trinity's SharePoint is contingent on him compromising her account; both risks are possible</td>
+    <td colspan = "2">Smith compromising Trinity's SharePoint could yield customer records, IP rights, or confidential data. It is unknown - so risk is moderate/unknown.</td>
+  </tr>
+  <tr>
+    <th>Recommended treatment</th>
+    <td colspan = "3">Secure the SharePoint by enforcing robust RBAC, ensuring Smith cannot establish a foothold in Trinity's account</td>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Likelihood</th>
+    <th>Consequence</th>
+    <th>Risk Level</th>
+  </tr>
+  <tr>
+    <th>Residual Risk</th>
+    <td>Rare</td>
+    <td>Moderate</td>
+    <td>Low</td>
+  </tr>
+  <tr>
+    <th>Justification</th>
+    <td>If Smith can exploit some sort of open API in Microsoft 365 or from the Sharepoint, he may gain access; otherwise it is rare to have residual risk.</td>
+    <td colspan = "2">Assuming the SharePoint is still compromised somehow, it would once again expose all the data within it. A moderate amount of risk but not a disaster. </td>
+
+  </tr>
+  <tr>
+    <th>Management Response</th>
+    <td>Mitigate</td>
+    <td colspan = "2">An encryption-at-rest encryption scheme can be applied to ensure the data is secured while in Trinity's SharePoint. Even if her SharePoint is compromised, it provides an extra layer of         defense.</td>
   </tr>
 </table>

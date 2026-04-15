@@ -128,12 +128,12 @@ been added to the business unit’s risk register for monitoring and future reme
     <td colspan = "3">If Agent Smith compromises Trinity's account, he will be able to access her Sharepoint and the data therein. (MFA)</td>
   </tr>
   <tr>
-    <th>Potential Impact</th>
-    <td colspan = "3">Exposure of potential company secrets erodes financial value, loss of trust over Trinity's privacyy</td>
-  </tr>
-  <tr>
     <th>Cause</th>
     <td colspan ="3">Compromise of Trinity's Microsoft 365 Tenant user account</td>
+  </tr>
+  <tr>
+    <th>Potential Impact</th>
+    <td colspan = "3">Exposure of potential company secrets erodes financial value, loss of trust over Trinity's privacyy</td>
   </tr>
   <tr>
     <th></th>

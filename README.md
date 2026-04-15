@@ -37,43 +37,93 @@ listed below will fix these issues.
 This was reconfigured to exclude Agent Smith from the HelpDesk Administrator role, which helped to contain the security breach. 
 
 ### Step 2: Turn on Security Defaults
-<img width="562" height="402" alt="9" src="https://github.com/user-attachments/assets/23b9897c-8e64-4512-a812-12a305611394" />
+<img width="910" height="650" alt="9" src="https://github.com/user-attachments/assets/23b9897c-8e64-4512-a812-12a305611394" />
 
 Security Defaults were enabled, blocking legacy authentication mechanisms, ensuring Multi-Factor Authentiction is enforced platform wide, providing protection against phishing attacks, and generally providing a much stronger security baseline. 
 
 ### Step 3: Turn on Per-User MFA
-<img width="562" height="402" alt="10" src="https://github.com/user-attachments/assets/666f4a51-658e-4199-ab42-7df0d4b09e53" />
+<img width="910" height="650"  alt="10" src="https://github.com/user-attachments/assets/666f4a51-658e-4199-ab42-7df0d4b09e53" />
 
 Per-User MFA was turned off for each User in the Tenant, and although MFA would be enforced regardless due to Security Defaults, it is good security hygiene to turn it on again.
 
 ## Validation
 
-### Ensuring Agent Smith lacks read and update permissions
+<table>
+  <tr>
+    <th>Test ID</th>
+    <th>Scenario</th>
+    <th>Test Steps</th>
+    <th>Expected Result</th>
+    <th>Actual Result</th>
+    <th>Status</th>
+  </tr>
+  
+  <tr>
+    <td>TC-01</td>
+    <td>Ensuring Agent Smith lacks read and update permissions</td>
+    <td>
+        1. Sign in as Smith
+        2. Navigate to Users
+        3. Check read/write/update permissions
+    </td>
+    <td>No read/write/update permissions</td>
+    <td>Result as expected</td>
+    <td>Pass</td>
+  </tr>
+  
+  <tr>
+    <td>TC-02</td>
+    <td>Confirming Smith's roles have been revoked through the view of a Global Administrator</td>
+    <td>
+        1. Login as Global Administrator
+        2. Navigate to Users
+        3. Click on Agent Smith 
+        4. Select Assigned Roles
+    </td>
+    <td>Smith has no assigned role</td>
+    <td>Result as expected</td>
+    <td>Pass</td>
+  </tr>
+  
+  <tr>
+    <td>TC-03</td>
+    <td>Testing whether MFA works by trying to sign in as a Microsoft Tenant User</td>
+    <td>
+        1. Sign in as any Microsoft Tenant User
+        2. User can press next but will be presented with MFA screen
+    </td>
+    <td>MFA should be enforced at sign in with any user</td>
+    <td>Result as expected</td>
+    <td>Pass</td>
+  </tr>
 
-<img width="750" height="472" alt="2" src="https://github.com/user-attachments/assets/d26118eb-5588-4a85-9397-379baf263355" />
+  <tr>
+    <td>TC-04</td>
+    <td>Confirming Security Defaults are enabled for the Microsoft Tenant</td>
+    <td>
+        1. Once signed-in, navigate to Overview under Entra ID
+        2. Click Properties
+        3. Scroll to bottom and check if it has been enabled
+    </td>
+    <td>Security Defaults should be enabled</td>
+    <td>Result as expected</td>
+    <td>Pass</td>
+  </tr>
 
-Agent Smith is denied not just password resetting permissions, but read permissions of Users in the Microsoft Tenant.
-
----
-### Confirming Smith's roles have been revoked through the view of a Global Administrator
-
-<img width="750" height="472" alt="1" src="https://github.com/user-attachments/assets/3459abad-b176-45a5-b169-eaf3cce34f6f" />
-
-Checking assigned permissions using the default directory Global Administrator account, Agent Smith has no assigned roles.
-
-### Testing whether MFA works
-<img width="440" height="524" alt="786082b70bd5abf95089aed86bab1752" src="https://github.com/user-attachments/assets/4566d5f3-e2ab-4f0c-b2f6-9faf2a4e82a1" />
-
-Attempting to sign in as Morpheus directs us to setup a Microsoft Authenticator. The prompt gives us no option to bypass it.
-
-### Final Sanity Checks
-<img width="1466" height="952" alt="bf4abf2791c755cbbda1ac69c8e926eb" src="https://github.com/user-attachments/assets/ad76b689-5768-4068-9c2c-5cc121cfea27" />
-
-Security Defaults are disabled for the Microsoft Tenant.
-
-<img width="1482" height="957" alt="36d38eca8e2c19f27bca93778263d286" src="https://github.com/user-attachments/assets/61b2d447-75c8-4c87-8e3a-c331b207bb1c" />
-
-Per-User MFA is either enforced (Security Defaults) or enabled.
+  <tr>
+    <td>TC-05</td>
+    <td>Checking to see if Per-User MFA was enabled</td>
+    <td>
+        1. Once signed-in, navigate to Users
+        2. Click the three dots ⋯ and click Per-User MFA
+        3. Check whether MFA has been enabled/enforced per user
+    </td>
+    <td>Every user should either have MFA enforced or enabled</td>
+    <td>Result as expected</td>
+    <td>Pass</td>
+  </tr>
+  
+</table>
 
 ## Lessons Learnt
 - Elected person(s) should sign off on granting administrative privileges

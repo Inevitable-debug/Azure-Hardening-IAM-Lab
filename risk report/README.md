@@ -36,7 +36,7 @@ to leverage those permissions outside the scope of their account to harvest data
 
 ## Summary
 | ID  | Classification                          | Risk                                                | Current Risk        | Mitigation Strategy |
-|-----|------------------------------------------|-----------------------------------------------------|---------------------|---------------------|
+|-----|-----------------------------------------|-----------------------------------------------------|---------------------|---------------------|
 |  1  | **Account Compromise**                  | **Compromise of Trinity's Account**                 | High                | Mitigate            | 
 |  2  | **Confidentiality and Data Protection** | **Unauthorised Access of Sharepoint**               | High                | Mitigate            | 
 |  3  | **Insider Threats**                     | **Reconaissance on Administrative Units**           | Medium              | Mitigate            | 
@@ -66,6 +66,10 @@ been added to the business unit’s risk register for monitoring and future reme
   <tr>
     <th>Cause</th>
     <td colspan = "3">Misconfiguration of roles for users in the Microsoft 365 Tenant</td>
+  </tr>
+  <tr>
+    <th>Potential Impact</th>
+    <td colspan = "3">Operational disruption of services, loss of finances (legal costs, wage costs), reputational damage, legal liabilities, psychological impacts on employees and customers</td>
   </tr>
   <tr>
     <th></th>
@@ -124,6 +128,10 @@ been added to the business unit’s risk register for monitoring and future reme
     <td colspan = "3">If Agent Smith compromises Trinity's account, he will be able to access her Sharepoint and the data therein. (MFA)</td>
   </tr>
   <tr>
+    <th>Potential Impact</th>
+    <td colspan = "3">Exposure of potential company secrets erodes financial value, loss of trust over Trinity's privacyy</td>
+  </tr>
+  <tr>
     <th>Cause</th>
     <td colspan ="3">Compromise of Trinity's Microsoft 365 Tenant user account</td>
   </tr>
@@ -165,7 +173,6 @@ been added to the business unit’s risk register for monitoring and future reme
     <th>Justification</th>
     <td>If Smith can exploit some sort of open API in Microsoft 365 or from the Sharepoint, he may gain access; otherwise it is rare to have residual risk.</td>
     <td colspan = "2">Assuming the SharePoint is still compromised somehow, it would once again expose all the data within it. A moderate amount of risk but not a disaster. </td>
-
   </tr>
   <tr>
     <th>Management Response</th>
@@ -187,6 +194,10 @@ been added to the business unit’s risk register for monitoring and future reme
   <tr>
     <th>Cause</th>
     <td colspan ="3">HelpDesk Administrator role grants Smith read permissions to view AUs of Member Accounts</td>
+  </tr>
+  <tr>
+    <th>Potential Impact</th>
+    <td colspan = "3">Negligible impacts; potentially a long term impact if this intelligence gathering leads to a hack later</td>
   </tr>
   <tr>
     <th></th>
@@ -226,7 +237,6 @@ been added to the business unit’s risk register for monitoring and future reme
     <th>Justification</th>
     <td>Smith is unlikely to circumvent his loss of read permissions unless he establishes a deeper foothold. Thus, it is rare for there to be residual risk.</td>
     <td colspan = "2">There could still be a minor threshold of damage done if Smith recorded the AUs and the Tenant did not change them to invalidate Smith's intelligence gathering </td>
-
   </tr>
   <tr>
     <th>Management Response</th>
@@ -248,6 +258,10 @@ been added to the business unit’s risk register for monitoring and future reme
   <tr>
     <th>Cause</th>
     <td colspan ="3">Smith's permissions as a HelpDesk Administator allows him to manage Service Requests from users or customers.</td>
+  </tr>
+  <tr>
+    <th>Potential Impact</th>
+    <td colspan = "3">Operational disruption of services, loss of consumer trust, legal liabilities, reputational damages</td>
   </tr>
   <tr>
     <th></th>
@@ -309,6 +323,10 @@ been added to the business unit’s risk register for monitoring and future reme
   <tr>
     <th>Cause</th>
     <td colspan ="3">Smith's foothold in the HelpDesk Administrator role privileges him with the authority of a trustworthy member of the organisation.</td>
+  </tr>
+  <tr>
+    <th>Potential Impact</th>
+    <td colspan = "3">Legal liabilities, reputational damage, financial loss (legal fees), psychological impacts on employees and customers</td>
   </tr>
   <tr>
     <th></th>

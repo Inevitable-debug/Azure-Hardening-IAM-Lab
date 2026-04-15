@@ -374,3 +374,69 @@ been added to the business unit’s risk register for monitoring and future reme
     <td colspan = "2">Revoke Smith's access to HelpDesk Administrator and immediately contact any customers Smith reached out to over email; offer remediation efforts and support.</td>
   </tr>
 </table>
+
+## Document Control
+<table>
+  <tr>
+    <th>Document ID</th>
+    <td>IAM-RISK-LAB-01</td>
+  </tr>
+  <tr>
+    <th>Version</th>
+    <td>0.7</td>
+  </tr>
+  <tr>
+    <th>Classification</th>
+    <td>Public</td>
+  </tr>
+  <tr>
+    <th>Approval by</th>
+    <td>Michael Mountjoy</td>
+  </tr>
+  <tr>
+    <th>Approval date</th>
+    <td>15/04/2026</td>
+  </tr>
+  <tr>
+    <th>Next review date</th>
+    <td>20/04/2026</td>
+  </tr>
+  <tr>
+    <th>Contact person</th>
+    <td>Michael Mountjoy</td>
+  </tr>
+</table>
+
+## Revision History
+<table>
+  <tr>
+    <th>Version</th>
+    <th>Date</th>
+    <th>Summary of Change</th>
+    <th>Author</th>
+  </tr>
+  <tr>
+    <td>0.1</td>
+    <td>13/04/2026</td>
+    <td>Scaffolding of headers for risk report</td>
+    <td>Michael Mountjoy</td>
+  </tr>
+  <tr>
+    <td>0.2</td>
+    <td>14/04/2026</td>
+    <td>Drafted proper Cybersecurity Risk Assessment Structure from Gov. of South Australia</td>
+    <td>Michael Mountjoy</td>
+  </tr>
+  <tr>
+    <td>0.2..0.9</td>
+    <td>15/04/2026</td>
+    <td>Completed risk assessment</td>
+    <td>Michael Mountjoy</td>
+  </tr>
+  <tr>
+    <td>1.0</td>
+    <td>n/n/n</td>
+    <td>Finishing touches to the report</td>
+    <td>Michael Mountjoy</td>
+  </tr>
+</table>

@@ -48,5 +48,34 @@ Per-User MFA was turned off for each User in the Tenant, and although MFA would 
 
 ## Validation
 
-## Lessons Learnt
+### Ensuring Agent Smith lacks read and update permissions
 
+<img width="750" height="472" alt="2" src="https://github.com/user-attachments/assets/d26118eb-5588-4a85-9397-379baf263355" />
+
+Agent Smith is denied not just password resetting permissions, but read permissions of Users in the Microsoft Tenant.
+
+---
+### Confirming Smith's roles have been revoked through the view of a Global Administrator
+
+<img width="750" height="472" alt="1" src="https://github.com/user-attachments/assets/3459abad-b176-45a5-b169-eaf3cce34f6f" />
+
+Checking assigned permissions using the default directory Global Administrator account, Agent Smith has no assigned roles.
+
+### Testing whether MFA works
+<img width="440" height="524" alt="786082b70bd5abf95089aed86bab1752" src="https://github.com/user-attachments/assets/4566d5f3-e2ab-4f0c-b2f6-9faf2a4e82a1" />
+
+Attempting to sign in as Morpheus directs us to setup a Microsoft Authenticator. The prompt gives us no option to bypass it.
+
+### Final Sanity Checks
+<img width="1466" height="952" alt="bf4abf2791c755cbbda1ac69c8e926eb" src="https://github.com/user-attachments/assets/ad76b689-5768-4068-9c2c-5cc121cfea27" />
+
+Security Defaults are disabled for the Microsoft Tenant.
+
+<img width="1482" height="957" alt="36d38eca8e2c19f27bca93778263d286" src="https://github.com/user-attachments/assets/61b2d447-75c8-4c87-8e3a-c331b207bb1c" />
+
+Per-User MFA is either enforced (Security Defaults) or enabled.
+
+## Lessons Learnt
+- Elected person(s) should sign off on granting administrative privileges
+- Enforce the rollout of secure baselines
+- Structured change management process (features, policies, roles)

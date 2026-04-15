@@ -428,7 +428,7 @@ been added to the business unit’s risk register for monitoring and future reme
     <td>Michael Mountjoy</td>
   </tr>
   <tr>
-    <td>0.2..0.9</td>
+    <td>0.3..0.9</td>
     <td>15/04/2026</td>
     <td>Completed risk assessment</td>
     <td>Michael Mountjoy</td>
